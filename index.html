@@ -1,917 +1,255 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taraz Tea - সরাসরি চা বাগান থেকে মানসম্মত চা</title>
-    <meta name="description" content="সরাসরি চা বাগান থেকে সংগৃহীত মানসম্মত চা পাতা ও প্রাকৃতিক উপাদান সমৃদ্ধ Taraz Tea অনলাইন শপ।" />
-    <meta property="og:title" content="Taraz Tea - সরাসরি চা বাগান থেকে মানসম্মত চা" />
-    <meta property="og:description" content="সরাসরি চা বাগান থেকে সংগৃহীত মানসম্মত চা পাতা ও প্রাকৃতিক উপাদান সমৃদ্ধ Taraz Tea অনলাইন শপ।" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="সরাসরি চা বাগান থেকে সংগৃহীত মানসম্মত চা পাতা ও প্রাকৃতিক উপাদান সমৃদ্ধ Taraz Tea অনলাইন শপ।">
     
-    <!-- Google Font (Hind Siliguri for Bengali typography) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="font-sans antialiased text-slate-800 bg-[#f8faf7]">
-    
-    <!-- 1. Top Announcement Bar -->
-    <div class="bg-[#042817] text-emerald-200 text-xs py-1.5 px-4 border-b border-emerald-800/40">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
-        <div class="flex items-center gap-2">
-          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>সরাসরি শ্রীমঙ্গলের চা বাগান থেকে সংগৃহীত ১০০% বিশুদ্ধ চা</span>
-        </div>
-        <div class="flex items-center gap-4 text-emerald-300/80">
-          <span>হটলাইন: <strong class="text-white">+880 1712-345678</strong></span>
-          <span class="hidden md:inline">|</span>
-          <span class="hidden md:inline">ক্যাশ অন ডেলিভারি সুবিধা</span>
-        </div>
-      </div>
-    </div>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- 2. Header & Navigation -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between gap-3 sm:gap-6">
-        
-        <!-- Brand Logo -->
-        <a href="/" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#094a2b] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-            <svg class="w-6 h-6 fill-current text-emerald-300" viewBox="0 0 24 24">
-              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl sm:text-2xl font-bold tracking-tight text-[#094a2b] uppercase leading-tight font-serif">Taraz Tea</span>
-            <span class="text-[10px] sm:text-xs text-stone-500 font-medium tracking-wide">Pure & Premium Blend</span>
-          </div>
-        </a>
+    <!-- Header -->
+    <header style="position: sticky; top: 0; z-index: var(--z-header); background: var(--bg-white); border-bottom: 1px solid var(--stone-200); box-shadow: var(--shadow-xs);">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px;">
+            
+            <!-- Logo -->
+            <a href="#" style="display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-dark); display: flex; align-items: center; justify-content: center; color: white;">
+                    <i class="fas fa-leaf" style="font-size: 20px;"></i>
+                </div>
+                <span style="font-weight: 700; color: var(--primary-dark); font-size: 18px;">Taraz Tea</span>
+            </a>
 
-        <!-- Search Bar -->
-        <div class="flex-1 max-w-md mx-2 sm:mx-6 hidden md:block">
-          <div class="relative w-full">
-            <input
-              id="search-input"
-              type="text"
-              oninput="handleSearch(this.value)"
-              placeholder="পছন্দের চা খুঁজুন (যেমন: গ্রিন টি, অর্থোডক্স)..."
-              class="w-full pl-10 pr-4 py-2 text-sm bg-stone-50 border border-stone-300 rounded-full focus:outline-none focus:border-[#094a2b] focus:bg-white focus:ring-2 focus:ring-emerald-600/20 transition-all text-slate-800"
-            />
-            <svg class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Header Actions: Account, Wishlist, Cart -->
-        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-          
-          <!-- Wholesale Quick Button -->
-          <button
-            onclick="openDrawer('wholesale-modal')"
-            class="hidden lg:flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-[#094a2b] bg-emerald-50 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition-colors cursor-pointer"
-          >
-            <span>পাইকারি যোগাযোগ</span>
-          </button>
-
-          <!-- User Account -->
-          <button
-            onclick="openDrawer('auth-modal')"
-            class="p-2 rounded-full text-stone-600 hover:text-[#094a2b] hover:bg-stone-100 transition-colors cursor-pointer"
-            title="অ্যাকাউন্ট"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </button>
-
-          <!-- Wishlist Badge Button -->
-          <button
-            onclick="openDrawer('wishlist-drawer')"
-            class="relative p-2 rounded-full text-stone-600 hover:text-[#094a2b] hover:bg-stone-100 transition-colors cursor-pointer"
-            title="পছন্দের তালিকা"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-            <span id="wishlist-count-badge" class="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white rounded-full text-[10px] font-bold flex items-center justify-center">0</span>
-          </button>
-
-          <!-- Cart Badge Button -->
-          <button
-            onclick="openDrawer('cart-drawer')"
-            class="flex items-center gap-2 bg-[#094a2b] hover:bg-[#07361f] text-white px-3 sm:px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm hover:shadow-md cursor-pointer active:scale-98"
-            title="শপিং ব্যাগ"
-          >
-            <div class="relative">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
-              <span id="cart-count-badge" class="absolute -top-2 -right-2 w-4 h-4 bg-amber-400 text-slate-900 rounded-full text-[10px] font-bold flex items-center justify-center">0</span>
+            <!-- Search Bar -->
+            <div style="flex: 1; max-width: 400px; display: none;">
+                <input type="text" placeholder="চা খুঁজুন..." style="width: 100%; padding: 8px 12px; border: 1px solid var(--stone-300); border-radius: var(--radius-full); font-size: 13px;">
             </div>
-            <span class="hidden sm:inline">ব্যাগ</span>
-          </button>
-        </div>
 
-      </div>
-
-      <!-- Mobile Search Bar -->
-      <div class="px-4 pb-3 md:hidden">
-        <div class="relative w-full">
-          <input
-            id="mobile-search-input"
-            type="text"
-            oninput="handleSearch(this.value)"
-            placeholder="চা খুঁজুন..."
-            class="w-full pl-9 pr-4 py-1.5 text-xs bg-stone-50 border border-stone-300 rounded-full focus:outline-none focus:border-[#094a2b]"
-          />
-          <svg class="w-3.5 h-3.5 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+            <!-- Header Actions -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <button style="background: none; border: none; color: var(--stone-600); font-size: 18px; cursor: pointer; padding: 8px; transition: color 0.2s;">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button style="background: none; border: none; color: var(--stone-600); font-size: 18px; cursor: pointer; padding: 8px; transition: color 0.2s;">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button style="background-color: var(--primary-dark); color: white; padding: 8px 14px; border-radius: var(--radius-lg); font-size: 12px; font-weight: 600; cursor: pointer; transition: background-color 0.2s; display: flex; align-items: center; gap: 6px;">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="sm:inline" style="display: none;">ব্যাগ</span>
+                </button>
+            </div>
         </div>
-      </div>
     </header>
 
-    <main>
-      <!-- 3. Hero Section (পাহাড়ের তাজা চা বাগান ব্যাকগ্রাউন্ড) -->
-      <section class="relative overflow-hidden min-h-[480px] md:min-h-[540px] flex items-center bg-[#07361f]">
-        
-        <!-- Mountain Landscape Background Image -->
-        <div class="absolute inset-0 z-0">
-          <img
-            src="/images/tea_mountain_bg_1789692073625.jpg"
-            alt="পাহাড়ি চা বাগান ব্যাকগ্রাউন্ড"
-            class="w-full h-full object-cover object-center scale-102"
-          />
-          <!-- Gradient overlay keeping mountains visible and text crisp -->
-          <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/85 via-emerald-950/50 to-emerald-950/20"></div>
-          <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 w-full">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            <!-- Left Text Content -->
-            <div class="md:col-span-7 text-white space-y-5">
-              <div class="space-y-3">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/80 text-emerald-200 border border-emerald-400/40 backdrop-blur-md shadow-md">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  পাহাড়ের তাজা চা বাগান থেকে সংগৃহীত
-                </span>
-                
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)]">
-                  সরাসরি চা বাগান থেকে<br />
-                  <span class="text-emerald-300">মানসম্মত চা</span>
-                </h1>
-                
-                <p class="text-base sm:text-lg lg:text-xl text-emerald-50 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                  প্রকৃতির সাথে, আপনার প্রতিদিন
-                </p>
-              </div>
-
-              <!-- Action Buttons matching the screenshot -->
-              <div class="flex flex-wrap items-center gap-3 pt-2">
-                <button
-                  onclick="document.getElementById('bestseller-section').scrollIntoView({ behavior: 'smooth' })"
-                  class="px-6 py-3 rounded-md bg-[#094a2b] hover:bg-[#063b22] text-white font-bold text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 border border-emerald-400/60 cursor-pointer"
-                >
-                  এখনই কিনুন
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(rgba(9, 74, 43, 0.4), rgba(9, 74, 43, 0.4)), url('https://images.unsplash.com/photo-1597318815635-3ac37e1a5c61?w=1200&h=400&fit=crop') center/cover; padding: 80px 16px; color: white; text-align: center; position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div class="container">
+            <h1 style="font-size: 42px; margin: 0 0 16px 0; color: white; font-weight: 700; line-height: 1.2;">সরাসরি চা বাগান থেকে<br>মান নিয়ন্ত্রিত চা</h1>
+            <p style="font-size: 16px; margin: 0 0 32px 0; opacity: 0.95; max-width: 500px; margin-left: auto; margin-right: auto;">শ্রীমঙ্গলের খাঁটি, অর্গানিক ও সুস্বাদু চা পাতা এখন আপনার দোরগোড়ায়</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <button style="background: white; color: var(--primary-dark); padding: 12px 28px; border-radius: var(--radius-lg); font-weight: 600; cursor: pointer; font-size: 14px; transition: transform 0.2s;">
+                    এখনই কিনুন
                 </button>
-                <button
-                  onclick="openDrawer('wholesale-modal')"
-                  class="px-6 py-3 rounded-md bg-white hover:bg-emerald-50 text-[#094a2b] font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-                >
-                  পাইকারি অর্ডার
+                <button style="background: transparent; color: white; border: 2px solid white; padding: 10px 28px; border-radius: var(--radius-lg); font-weight: 600; cursor: pointer; font-size: 14px; transition: all 0.2s;">
+                    আরও জানুন
                 </button>
-              </div>
-
-              <!-- Micro badges banner -->
-              <div class="pt-3 flex flex-wrap items-center gap-4 text-emerald-100/90 text-xs sm:text-sm font-medium drop-shadow-sm">
-                <div class="flex items-center gap-1.5 bg-black/35 px-3 py-1 rounded-full backdrop-blur-xs border border-white/15">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span>শ্রীমঙ্গলের পাহাড়ি বাগান</span>
-                </div>
-                <div class="flex items-center gap-1.5 bg-black/35 px-3 py-1 rounded-full backdrop-blur-xs border border-white/15">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span>১০০% প্রাকৃতিক ও অর্গানিক</span>
-                </div>
-              </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Right Hero Visual: Steaming Fresh Tea on Wooden Cut in Mountains -->
-            <div class="md:col-span-5 flex justify-center items-center relative">
-              <div class="relative w-72 h-72 sm:w-84 sm:h-84 flex items-center justify-center">
-                <!-- Soft mountain aura behind the cup -->
-                <div class="absolute inset-0 rounded-full bg-radial from-emerald-400/25 via-emerald-600/10 to-transparent blur-2xl"></div>
+    <!-- Category Section -->
+    <section style="padding: 40px 16px; background-color: var(--bg-white);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 32px; color: var(--primary-dark); font-size: 18px;">চা এর বিভাগ</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 20px;">
                 
-                <!-- Fresh Tea Brewed on Wooden Slice Card -->
-                <div class="relative z-10 w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/40 bg-emerald-950/40 backdrop-blur-xs group">
-                  <img
-                    src="/images/hero_tea_cup_1789692090901.jpg"
-                    alt="পাহাড়ে ফ্রেশ চা ও তাজা চা পাতা"
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                  />
-                  
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                  
-                  <!-- Freshly Brewed Tea Label matching screenshot -->
-                  <div class="absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between text-white text-xs bg-emerald-950/80 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 shadow-md">
-                    <div class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                      <span class="font-semibold text-emerald-100">তাজা পাহাড়ি লিকার</span>
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: var(--primary-dark); display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <span class="text-amber-300 font-extrabold tracking-wide">100% Pure</span>
-                  </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">গ্রীন টি</p>
                 </div>
 
-                <!-- Decorative Tea Leaf badge -->
-                <div class="absolute -top-2 -right-2 z-20 bg-white text-[#094a2b] shadow-xl rounded-full p-2.5 border-2 border-emerald-300">
-                  <svg class="w-6 h-6 fill-current text-emerald-600" viewBox="0 0 24 24">
-                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
-                  </svg>
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: #8B4513; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">ব্ল্যাক টি</p>
                 </div>
-              </div>
+
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: var(--emerald-600); display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-clover"></i>
+                    </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">হার্বাল টি</p>
+                </div>
+
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: #D4A574; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-spoon"></i>
+                    </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">CTC টি</p>
+                </div>
+
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-flower"></i>
+                    </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">ফ্লাওয়ার মিক্স</p>
+                </div>
+
+                <div style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; background-color: #C9A961; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; transition: transform 0.2s;">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <p style="margin: 0; font-size: 12px; color: var(--stone-700); font-weight: 600;">পাউডার চা</p>
+                </div>
+
             </div>
-
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 4. Category Grid (৬টি ক্যাটাগরি আইকন পিলস) -->
-      <section class="py-6 sm:py-8 bg-stone-50/80 border-b border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2.5 sm:gap-4">
+    <!-- Featured Products -->
+    <section style="padding: 50px 16px; background-color: var(--bg-main);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 32px; color: var(--primary-dark); font-size: 18px;">বেস্ট সেলার</h2>
             
-            <!-- 1. Green Tea -->
-            <button data-category="green" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-emerald-600" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">Green Tea</span>
-              <span class="text-[10px] text-stone-400">গ্রিন টি</span>
-            </button>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px;">
+                
+                <!-- Product Card 1 -->
+                <div class="card" style="text-align: center; padding: 16px;">
+                    <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-radius: var(--radius-lg); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-leaf" style="font-size: 40px; color: var(--primary-dark);"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 4px 0; font-size: 13px;">অর্থোডক্স টি</h3>
+                    <p style="color: var(--stone-500); font-size: 11px; margin: 0 0 12px 0;">প্রিমিয়াম ব্লেন্ড</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 14px; font-weight: 700; color: var(--primary-dark);">৳ ২৫০</span>
+                        <span style="font-size: 10px; color: var(--stone-400); text-decoration: line-through;">৳ ৩২০</span>
+                    </div>
+                    <button style="width: 100%; background-color: var(--primary-dark); color: white; padding: 8px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 11px; transition: background-color 0.2s;">যোগ করুন</button>
+                </div>
 
-            <!-- 2. Black Tea -->
-            <button data-category="black" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-stone-100 text-stone-800 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-stone-800" viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM2 19h18v2H2z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">Black Tea</span>
-              <span class="text-[10px] text-stone-400">ব্ল্যাক টি</span>
-            </button>
+                <!-- Product Card 2 -->
+                <div class="card" style="text-align: center; padding: 16px;">
+                    <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #FFF9C4, #FFF59D); border-radius: var(--radius-lg); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-leaf" style="font-size: 40px; color: #8B7500;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 4px 0; font-size: 13px;">গ্রীন টি</h3>
+                    <p style="color: var(--stone-500); font-size: 11px; margin: 0 0 12px 0;">অর্গানিক</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 14px; font-weight: 700; color: var(--primary-dark);">৳ ৩৫০</span>
+                        <span style="font-size: 10px; color: var(--stone-400); text-decoration: line-through;">৳ ৪৫০</span>
+                    </div>
+                    <button style="width: 100%; background-color: var(--primary-dark); color: white; padding: 8px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 11px; transition: background-color 0.2s;">যোগ করুন</button>
+                </div>
 
-            <!-- 3. Orthodox Tea -->
-            <button data-category="orthodox" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-amber-600" viewBox="0 0 24 24"><path d="M12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2Z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">Orthodox Tea</span>
-              <span class="text-[10px] text-stone-400">অর্থোডক্স টি</span>
-            </button>
+                <!-- Product Card 3 -->
+                <div class="card" style="text-align: center; padding: 16px;">
+                    <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #FFEBEE, #FFCDD2); border-radius: var(--radius-lg); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-coffee" style="font-size: 40px; color: #8B4513;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 4px 0; font-size: 13px;">CTC টি</h3>
+                    <p style="color: var(--stone-500); font-size: 11px; margin: 0 0 12px 0;">ব্ল্যাক টি</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 14px; font-weight: 700; color: var(--primary-dark);">৳ ১৮০</span>
+                        <span style="font-size: 10px; color: var(--stone-400); text-decoration: line-through;">৳ ২৫০</span>
+                    </div>
+                    <button style="width: 100%; background-color: var(--primary-dark); color: white; padding: 8px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 11px; transition: background-color 0.2s;">যোগ করুন</button>
+                </div>
 
-            <!-- 4. White Tea -->
-            <button data-category="white" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-emerald-500" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.5 2 12c0 3.58 2.5 7 6 8.5V22l4-2 4 2v-1.5c3.5-1.5 6-4.92 6-8.5 0-5.5-4.5-9-10-9z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">White Tea</span>
-              <span class="text-[10px] text-stone-400">হোয়াইট টি</span>
-            </button>
+                <!-- Product Card 4 -->
+                <div class="card" style="text-align: center; padding: 16px;">
+                    <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border-radius: var(--radius-lg); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-flower" style="font-size: 40px; color: #7B1FA2;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 4px 0; font-size: 13px;">ফ্লাওয়ার টি</h3>
+                    <p style="color: var(--stone-500); font-size: 11px; margin: 0 0 12px 0;">বিশেষ মিশ্রণ</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 14px; font-weight: 700; color: var(--primary-dark);">৳ ৪২০</span>
+                        <span style="font-size: 10px; color: var(--stone-400); text-decoration: line-through;">৳ ৫৫০</span>
+                    </div>
+                    <button style="width: 100%; background-color: var(--primary-dark); color: white; padding: 8px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 11px; transition: background-color 0.2s;">যোগ করুন</button>
+                </div>
 
-            <!-- 5. Yellow Tea -->
-            <button data-category="yellow" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-yellow-50 text-yellow-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-yellow-600" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">Yellow Tea</span>
-              <span class="text-[10px] text-stone-400">ইয়েলো টি</span>
-            </button>
+                <!-- Product Card 5 -->
+                <div class="card" style="text-align: center; padding: 16px;">
+                    <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #E0F2F1, #B2DFDB); border-radius: var(--radius-lg); margin-bottom: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-mortar-pestle" style="font-size: 40px; color: #00695C;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 4px 0; font-size: 13px;">পাউডার টি</h3>
+                    <p style="color: var(--stone-500); font-size: 11px; margin: 0 0 12px 0;">তাৎক্ষণিক</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                        <span style="font-size: 14px; font-weight: 700; color: var(--primary-dark);">৳ ৩২০</span>
+                        <span style="font-size: 10px; color: var(--stone-400); text-decoration: line-through;">৳ ৪২০</span>
+                    </div>
+                    <button style="width: 100%; background-color: var(--primary-dark); color: white; padding: 8px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 11px; transition: background-color 0.2s;">যোগ করুন</button>
+                </div>
 
-            <!-- 6. Herbal Tea -->
-            <button data-category="herbal" class="cat-btn flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-600 hover:shadow-sm transition-all text-center group cursor-pointer">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-teal-600" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-              </div>
-              <span class="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-emerald-800">Herbal Tea</span>
-              <span class="text-[10px] text-stone-400">হার্বাল টি</span>
-            </button>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. Best Seller Section (বেস্ট সেলার) -->
-      <section id="bestseller-section" class="py-10 sm:py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          
-          <div class="flex items-center justify-between mb-6 pb-2 border-b border-stone-200">
-            <div>
-              <h2 id="bestseller-filter-title" class="text-xl sm:text-2xl font-bold text-slate-800 flex items-center gap-2">
-                <span>বেস্ট সেলার</span>
-                <span class="text-xs font-normal text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">সর্বাধিক বিক্রিত</span>
-              </h2>
-              <p class="text-xs sm:text-sm text-stone-500 mt-0.5">সবচেয়ে জনপ্রিয় ও প্রিমিয়াম কোয়ালিটির চা সম্ভার</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section style="background-color: var(--bg-white); padding: 50px 16px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-dark); font-size: 18px;">কেন Taraz Tea বেছে নেবেন?</h2>
             
-            <button onclick="resetFilters()" class="text-xs sm:text-sm font-semibold text-[#094a2b] hover:text-emerald-700 flex items-center gap-1 cursor-pointer">
-              <span>সব চা দেখুন</span>
-              <span>→</span>
-            </button>
-          </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px;">
+                
+                <div style="text-align: center;">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%; background-color: #E8F5E9; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-leaf" style="font-size: 32px; color: var(--primary-dark);"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 8px 0; font-size: 14px; font-weight: 600;">১০০% প্রাকৃতিক</h3>
+                    <p style="color: var(--stone-600); font-size: 11px; margin: 0; line-height: 1.4;">কোনো রাসায়নিক বা কৃত্রিম উপাদান নেই</p>
+                </div>
 
-          <!-- Product Grid Rendered by JavaScript -->
-          <div id="products-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-5">
-            <!-- Dynamic Content loaded via src/main.js -->
-          </div>
+                <div style="text-align: center;">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%; background-color: #E3F2FD; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-truck" style="font-size: 32px; color: #1976D2;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 8px 0; font-size: 14px; font-weight: 600;">দ্রুত ডেলিভারি</h3>
+                    <p style="color: var(--stone-600); font-size: 11px; margin: 0; line-height: 1.4;">সারাদেশে ২-৩ দিনে পৌঁছে যায়</p>
+                </div>
 
+                <div style="text-align: center;">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%; background-color: #FFF3E0; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-tag" style="font-size: 32px; color: #F57C00;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 8px 0; font-size: 14px; font-weight: 600;">সাশ্রয়ী মূল্য</h3>
+                    <p style="color: var(--stone-600); font-size: 11px; margin: 0; line-height: 1.4;">সরাসরি বাগান থেকে কম দামে</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%; background-color: #F3E5F5; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-box" style="font-size: 32px; color: #7B1FA2;"></i>
+                    </div>
+                    <h3 style="color: var(--primary-dark); margin: 0 0 8px 0; font-size: 14px; font-weight: 600;">নিরাপদ প্যাকেজিং</h3>
+                    <p style="color: var(--stone-600); font-size: 11px; margin: 0; line-height: 1.4;">এয়ারটাইট প্যাকেজিং এ পাঠানো</p>
+                </div>
+
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 6. Feature Highlights (৪টি ট্রাস্ট ফিচার ব্যাজ) -->
-      <section class="py-8 bg-stone-100/70 border-y border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+    <!-- Contact Section -->
+    <section style="padding: 60px 16px; background-color: var(--bg-white);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-dark);">আমাদের সাথে যোগাযোগ করুন</h2>
             
-            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="w-11 h-11 rounded-lg bg-emerald-50 text-[#094a2b] flex items-center justify-center shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              </div>
-              <div>
-                <h4 class="text-xs sm:text-sm font-bold text-slate-800">Tea Taster Checked</h4>
-                <p class="text-[11px] text-stone-500">টি টেস্টার দ্বারা পরীক্ষিত</p>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="w-11 h-11 rounded-lg bg-emerald-50 text-[#094a2b] flex items-center justify-center shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
-              </div>
-              <div>
-                <h4 class="text-xs sm:text-sm font-bold text-slate-800">Fresh Packing</h4>
-                <p class="text-[11px] text-stone-500">বায়ুরোধী তাজা প্যাকিং</p>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="w-11 h-11 rounded-lg bg-emerald-50 text-[#094a2b] flex items-center justify-center shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-              </div>
-              <div>
-                <h4 class="text-xs sm:text-sm font-bold text-slate-800">Wholesale Available</h4>
-                <p class="text-[11px] text-stone-500">পাইকারি ক্রয়ে বিশেষ ছাড়</p>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="w-11 h-11 rounded-lg bg-emerald-50 text-[#094a2b] flex items-center justify-center shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-              </div>
-              <div>
-                <h4 class="text-xs sm:text-sm font-bold text-slate-800">Nationwide Delivery</h4>
-                <p class="text-[11px] text-stone-500">দ্রুততম হোম ডেলিভারি</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 7. Affiliate Banner ("বিক্রি না করেও আয় করুন") -->
-      <section class="py-6 sm:py-8 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="relative overflow-hidden rounded-2xl text-white p-6 sm:p-8 shadow-lg border border-emerald-500/40 flex flex-col sm:flex-row items-center justify-between gap-5 group">
-            
-            <!-- Real Tea Leaves Background Image -->
-            <div class="absolute inset-0 z-0">
-              <img
-                src="/images/affiliate_banner_bg_1789692353991.jpg"
-                alt="চা পাতার বাগান ব্যাকগ্রাউন্ড"
-                class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-1000"
-              />
-              <div class="absolute inset-0 bg-gradient-to-r from-[#06331e]/90 via-[#0a4729]/75 to-[#06331e]/85"></div>
-            </div>
-
-            <!-- Left Visual & Text -->
-            <div class="relative z-10 flex items-center gap-4 text-center sm:text-left">
-              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-emerald-950/60 border border-emerald-400/40 backdrop-blur-md flex items-center justify-center shrink-0 shadow-lg">
-                <svg class="w-7 h-7 text-amber-300 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-
-              <div>
-                <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-300 bg-black/30 px-2.5 py-0.5 rounded-full mb-1 border border-amber-300/30">
-                  পার্টনারশিপ প্রোগ্রাম
-                </span>
-                <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                  বিক্রি না করেও আয় করুন
-                </h3>
-                <p class="text-emerald-100 font-semibold text-sm sm:text-base mt-0.5 tracking-wide drop-shadow-sm">
-                  Taraz Tea Affiliate Program
-                </p>
-                <p class="text-emerald-200/90 text-xs sm:text-sm mt-1 hidden md:block">
-                  আপনার বিশেষ রেফারেল লিংক দিয়ে অর্ডারে পেয়ে যান সর্বোচ্চ ১০% নিশ্চিত কমিশন!
-                </p>
-              </div>
-            </div>
-
-            <!-- Right Action Button -->
-            <div class="relative z-10 shrink-0">
-              <button
-                onclick="openDrawer('affiliate-modal')"
-                class="px-7 sm:px-8 py-3 rounded-xl bg-[#06351e] hover:bg-[#042515] text-white font-bold text-sm sm:text-base border border-emerald-400/50 shadow-xl hover:shadow-2xl transition-all flex items-center gap-2.5 group cursor-pointer active:scale-98"
-              >
-                <span>যোগ দিন</span>
-                <svg class="w-4 h-4 text-emerald-300 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- 8. Testimonials Section (গ্রাহকদের মতামত) -->
-      <section class="py-10 sm:py-12 bg-[#f4f7f4] border-t border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          
-          <div class="text-center max-w-xl mx-auto mb-8">
-            <h2 class="text-xl sm:text-2xl font-bold text-slate-800">গ্রাহকদের মতামত</h2>
-            <p class="text-xs sm:text-sm text-stone-500 mt-1">দেশজুড়ে আমাদের সন্তুষ্ট চা প্রেমীদের বিশ্বস্ত অনুভূতি</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-1 text-amber-400 mb-3">
-                  ★★★★★
-                </div>
-                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
-                  "শ্রীমঙ্গলের আসল চা পাতার গন্ধ আর গাঢ় লিকার পেয়ে আমি মুগ্ধ। বিশেষ করে অর্থোডক্স গোল্ডেনের ফ্লেভার এককথায় অতুলনীয়!"
-                </p>
-              </div>
-              <div class="flex items-center gap-3 pt-4 mt-4 border-t border-stone-100">
-                <div class="w-9 h-9 rounded-full bg-emerald-100 text-[#094a2b] font-bold text-xs flex items-center justify-center">
-                  র
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-slate-800">মোঃ রহিম</h4>
-                  <p class="text-[10px] text-stone-400">সিলেট সদর • ভেরিফাইড ক্রেতা</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-1 text-amber-400 mb-3">
-                  ★★★★★
-                </div>
-                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
-                  "গ্রিন টির কোয়ালিটি সত্যিই দারুণ। অন্য ব্র্যান্ডের মতো তিতা লাগে না, একদম ফ্রেশ পাতার মিষ্টি সুবাস পাওয়া যায়।"
-                </p>
-              </div>
-              <div class="flex items-center gap-3 pt-4 mt-4 border-t border-stone-100">
-                <div class="w-9 h-9 rounded-full bg-emerald-100 text-[#094a2b] font-bold text-xs flex items-center justify-center">
-                  স
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-slate-800">সাদিয়া আক্তার</h4>
-                  <p class="text-[10px] text-stone-400">ধানমন্ডি, ঢাকা • নিয়মিত গ্রাহক</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-1 text-amber-400 mb-3">
-                  ★★★★★
-                </div>
-                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
-                  "আমাদের অফিসের জন্য নিয়মিত অর্থোডক্স ৫০০ গ্রামের প্যাক নিচ্ছি। সবাই খুব পছন্দ করেছে। ডেলিভারিও পেয়েছি মাত্র ২ দিনে।"
-                </p>
-              </div>
-              <div class="flex items-center gap-3 pt-4 mt-4 border-t border-stone-100">
-                <div class="w-9 h-9 rounded-full bg-emerald-100 text-[#094a2b] font-bold text-xs flex items-center justify-center">
-                  হ
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-slate-800">হাসান মাহমুদ</h4>
-                  <p class="text-[10px] text-stone-400">চট্টগ্রাম • পাইকারি ক্রেতা</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-    </main>
-
-    <!-- 9. Footer (ডিপ গ্রিন ফুটার) -->
-    <footer class="bg-[#052615] text-stone-300 border-t border-emerald-950 pt-12 pb-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-emerald-900/60">
-          
-          <!-- Column 1: Brand Info -->
-          <div class="md:col-span-4 space-y-4">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-[#094a2b] flex items-center justify-center text-white border border-emerald-500/40">
-                <svg class="w-5 h-5 fill-current text-emerald-300" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
-              </div>
-              <span class="text-2xl font-bold tracking-tight text-white uppercase font-serif">Taraz Tea</span>
-            </div>
-            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed max-w-sm">
-              শ্রীমঙ্গলের পাহাড়ি বাগান থেকে বাছাইকৃত তাজা ও খাঁটি চা পাতা। কোনো ধরনের কৃত্রিম ফ্লেভার বা কেমিক্যাল ছাড়া প্রাকৃতিক শুদ্ধতা।
-            </p>
-            <div class="pt-2 text-xs space-y-1.5 text-stone-300">
-              <p>📍 চা বাগান এলাকা, শ্রীমঙ্গল, মৌলভীবাজার</p>
-              <p>📍 কর্পোরেট অফিস: বনানী, ঢাকা-১২১৩</p>
-              <p>📞 হটলাইন: +880 1712-345678, +880 1890-123456</p>
-              <p>✉️ ইমেইল: info@taraztea.com.bd</p>
-              <p>🌐 ওয়েবসাইট: www.taraztea.com.bd</p>
-            </div>
-            <!-- Social Media Buttons -->
-            <div class="flex items-center gap-2 pt-2">
-              <a href="#" class="w-8 h-8 rounded-full bg-[#1877f2] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="Facebook">f</a>
-              <a href="#" class="w-8 h-8 rounded-full bg-[#25d366] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="WhatsApp">W</a>
-              <a href="#" class="w-8 h-8 rounded-full bg-[#ff0000] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="YouTube">Y</a>
-              <a href="#" class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="Instagram">I</a>
-            </div>
-          </div>
-
-          <!-- Column 2: Quick Links -->
-          <div class="md:col-span-3 space-y-3">
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider">চা ক্যাটাগরি</h4>
-            <ul class="space-y-2 text-xs text-stone-300">
-              <li><a href="#" onclick="setCategory('green'); return false;" class="hover:text-emerald-300 transition-colors">গ্রিন টি (Green Tea)</a></li>
-              <li><a href="#" onclick="setCategory('black'); return false;" class="hover:text-emerald-300 transition-colors">ব্ল্যাক টি (Black Tea)</a></li>
-              <li><a href="#" onclick="setCategory('orthodox'); return false;" class="hover:text-emerald-300 transition-colors">অর্থোডক্স গোল্ডেন টি</a></li>
-              <li><a href="#" onclick="setCategory('white'); return false;" class="hover:text-emerald-300 transition-colors">হোয়াইট টি (White Tea)</a></li>
-              <li><a href="#" onclick="setCategory('herbal'); return false;" class="hover:text-emerald-300 transition-colors">হার্বাল ও অর্গানিক টি</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 3: Customer Care -->
-          <div class="md:col-span-2 space-y-3">
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider">গ্রাহক সেবা</h4>
-            <ul class="space-y-2 text-xs text-stone-300">
-              <li><a href="#" class="hover:text-emerald-300 transition-colors">ডেলিভারি পলিসি</a></li>
-              <li><a href="#" class="hover:text-emerald-300 transition-colors">রিটার্ন ও রিফান্ড</a></li>
-              <li><a href="#" class="hover:text-emerald-300 transition-colors">শর্তাবলী</a></li>
-              <li><a href="#" class="hover:text-emerald-300 transition-colors">প্রাইভেসি পলিসি</a></li>
-              <li><a href="#" class="hover:text-emerald-300 transition-colors">সচরাচর জিজ্ঞাসা (FAQ)</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 4: Business Partnerships -->
-          <div class="md:col-span-3 space-y-3">
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider">ব্যবসায়িক যোগাযোগ</h4>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              দোকানদার, রেস্টুরেন্ট, কর্পোরেট অফিস বা ডিলারশিপের জন্য সরাসরি পাইকারি দরে চা কিনুন।
-            </p>
-            <button onclick="openDrawer('wholesale-modal')" class="w-full py-2 bg-emerald-800 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition-colors cursor-pointer">
-              পাইকারি অর্ডার ফরম
-            </button>
-            <button onclick="openDrawer('affiliate-modal')" class="w-full py-2 bg-stone-800 hover:bg-stone-700 text-amber-300 rounded-lg text-xs font-semibold transition-colors border border-amber-300/30 cursor-pointer">
-              অ্যাফিলিয়েট পার্টনারশিপ
-            </button>
-          </div>
-
-        </div>
-
-        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-400 text-center sm:text-left">
-          <p>© 2026 Taraz Tea. All rights reserved. সরাসরি বাগান থেকে ভোক্তার কাপে।</p>
-          <div class="flex items-center gap-4">
-            <span>নিরাপদ পেমেন্ট: ক্যাশ অন ডেলিভারি | বিকাশ | নগদ</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- 10. Sliding Cart Drawer -->
-    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
-      <div onclick="closeDrawer('cart-drawer')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="absolute inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300">
-        <div class="p-4 border-b border-stone-200 flex items-center justify-between bg-stone-50">
-          <div class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-[#094a2b]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-            <h3 class="text-base font-bold text-slate-800">আপনার শপিং ব্যাগ</h3>
-          </div>
-          <button onclick="closeDrawer('cart-drawer')" class="p-1.5 text-stone-400 hover:text-stone-700 rounded-lg hover:bg-stone-200 cursor-pointer">✕</button>
-        </div>
-        
-        <!-- Cart Items List -->
-        <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
-          <!-- Rendered by JS -->
-        </div>
-
-        <!-- Cart Summary & Checkout -->
-        <div id="cart-footer" class="p-4 border-t border-stone-200 bg-stone-50 space-y-3 hidden">
-          <div class="space-y-1.5 text-xs text-stone-600">
-            <div class="flex justify-between">
-              <span>সাবটোটাল</span>
-              <span id="cart-subtotal" class="font-bold text-slate-800">৳ 0</span>
-            </div>
-            <div class="flex justify-between">
-              <span>ডেলিভারি চার্জ</span>
-              <span id="cart-delivery" class="text-emerald-700 font-semibold">৳ 60</span>
-            </div>
-            <div class="flex justify-between text-sm font-bold text-slate-800 pt-2 border-t border-stone-200">
-              <span>সর্বমোট</span>
-              <span id="cart-total" class="text-[#094a2b]">৳ 0</span>
-            </div>
-          </div>
-          <button onclick="closeDrawer('cart-drawer'); openDrawer('checkout-modal');" class="w-full py-3 bg-[#094a2b] hover:bg-[#07361f] text-white rounded-xl font-bold text-sm transition-all shadow-md cursor-pointer">
-            চেকআউট করুন (অর্ডার সম্পন্ন করুন)
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 11. Wishlist Drawer -->
-    <div id="wishlist-drawer" class="fixed inset-0 z-50 hidden">
-      <div onclick="closeDrawer('wishlist-drawer')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="absolute inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col z-10">
-        <div class="p-4 border-b border-stone-200 flex items-center justify-between bg-stone-50">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">❤️</span>
-            <h3 class="text-base font-bold text-slate-800">পছন্দের তালিকা</h3>
-          </div>
-          <button onclick="closeDrawer('wishlist-drawer')" class="p-1.5 text-stone-400 hover:text-stone-700 rounded-lg hover:bg-stone-200 cursor-pointer">✕</button>
-        </div>
-        <div id="wishlist-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
-          <!-- Rendered by JS -->
-        </div>
-      </div>
-    </div>
-
-    <!-- 12. Product Quick View Modal -->
-    <div id="product-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('product-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-5 sm:p-6 z-10 max-h-[90vh] overflow-y-auto">
-        <button onclick="closeDrawer('product-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">✕</button>
-        
-        <div class="flex flex-col sm:flex-row gap-5 items-center">
-          <div id="modal-product-pouch" class="w-40 sm:w-44 shrink-0 flex items-center justify-center"></div>
-          <div class="space-y-2 text-center sm:text-left">
-            <h3 id="modal-product-name" class="text-xl font-bold text-slate-800"></h3>
-            <p id="modal-product-sub" class="text-xs text-stone-500 font-medium"></p>
-            <div id="modal-product-price" class="text-2xl font-bold text-[#094a2b]"></div>
-            <p id="modal-product-desc" class="text-xs text-stone-600 leading-relaxed pt-1"></p>
-          </div>
-        </div>
-
-        <!-- Health Benefits -->
-        <div class="mt-4 pt-3 border-t border-stone-200">
-          <h4 class="text-xs font-bold text-slate-700 mb-2">উপকারিতা ও বৈশিষ্ট্য:</h4>
-          <div id="modal-benefits" class="grid grid-cols-2 gap-1.5"></div>
-        </div>
-
-        <!-- Quantity & Add to Cart -->
-        <div class="mt-5 pt-4 border-t border-stone-200 flex items-center justify-between gap-4">
-          <div class="flex items-center border border-stone-300 rounded-lg">
-            <button onclick="changeModalQty(-1)" class="px-3 py-1.5 text-stone-600 hover:bg-stone-100 font-bold">-</button>
-            <span id="modal-qty-display" class="px-3 text-sm font-bold text-slate-800">1</span>
-            <button onclick="changeModalQty(1)" class="px-3 py-1.5 text-stone-600 hover:bg-stone-100 font-bold">+</button>
-          </div>
-          <button onclick="addModalProductToCart()" class="flex-1 py-2.5 bg-[#094a2b] hover:bg-[#07361f] text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer">
-            <span>ব্যাগে যোগ করুন</span>
-            <span id="modal-btn-price" class="text-emerald-200"></span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13. Checkout Modal (ক্যাশ অন ডেলিভারি ফর্ম) -->
-    <div id="checkout-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('checkout-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 z-10 max-h-[90vh] overflow-y-auto">
-        <button onclick="closeDrawer('checkout-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">✕</button>
-        
-        <div class="flex items-center gap-2 mb-4">
-          <span class="p-2 rounded-lg bg-emerald-100 text-[#094a2b]">📦</span>
-          <div>
-            <h3 class="text-lg font-bold text-slate-800">অর্ডার কনফার্ম করুন</h3>
-            <p class="text-xs text-stone-500">পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন (Cash on Delivery)</p>
-          </div>
-        </div>
-
-        <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3.5 text-xs">
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">আপনার পূর্ণ নাম *</label>
-            <input id="checkout-name" required type="text" placeholder="যেমন: মোঃ সাকিব রহমান" class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-[#094a2b]" />
-          </div>
-
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">মোবাইল নম্বর *</label>
-            <input id="checkout-phone" required type="tel" placeholder="০১৭xxxxxxxx" class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-[#094a2b]" />
-          </div>
-
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">ডেলিভারি ঠিকানা *</label>
-            <textarea id="checkout-address" required rows="2" placeholder="বাড়ি নং, রোড, এলাকা, থানা ও জেলা..." class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-[#094a2b]"></textarea>
-          </div>
-
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">শহর/এলাকা</label>
-            <select id="checkout-city" onchange="updateCheckoutSummary()" class="w-full px-3 py-2 border border-stone-300 rounded-lg bg-white">
-              <option value="ঢাকা">ঢাকার ভেতর (ডেলিভারি ৬০ টাকা / ১০০০+ ফ্রি)</option>
-              <option value="বাইরে">ঢাকার বাইরে (ডেলিভারি ১২০ টাকা)</option>
-            </select>
-          </div>
-
-          <!-- Live Order Summary Box -->
-          <div class="p-3 bg-stone-50 rounded-xl border border-stone-200 space-y-1.5">
-            <div class="flex justify-between items-center text-stone-600">
-              <span>অর্ডারের পরিমাণ:</span>
-              <span id="checkout-summary-items" class="font-semibold text-slate-800">০ টি আইটেম</span>
-            </div>
-            <div class="flex justify-between items-center text-stone-600">
-              <span>সাবটোটাল:</span>
-              <span id="checkout-summary-subtotal" class="font-semibold text-slate-800">৳ ০</span>
-            </div>
-            <div class="flex justify-between items-center text-stone-600">
-              <span>ডেলিভারি চার্জ:</span>
-              <span id="checkout-summary-delivery" class="font-semibold text-emerald-700">৳ ৬০</span>
-            </div>
-            <div class="border-t border-stone-200 pt-1.5 flex justify-between items-center font-bold text-slate-800 text-sm">
-              <span>সর্বমোট প্রদেয়:</span>
-              <span id="checkout-summary-total" class="text-[#094a2b] font-bold text-base">৳ ৬০</span>
-            </div>
-          </div>
-
-          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
-            <span class="font-bold text-[#094a2b]">পেমেন্ট পদ্ধতি:</span>
-            <div class="flex items-center gap-4 mt-1.5">
-              <label class="flex items-center gap-1.5 cursor-pointer">
-                <input type="radio" name="payment" checked />
-                <span>ক্যাশ অন ডেলিভারি</span>
-              </label>
-              <label class="flex items-center gap-1.5 cursor-pointer">
-                <input type="radio" name="payment" />
-                <span>বিকাশ / নগদ</span>
-              </label>
-            </div>
-          </div>
-
-          <button type="submit" class="w-full py-3 bg-[#094a2b] hover:bg-[#07361f] text-white rounded-xl font-bold text-sm transition-all shadow-md cursor-pointer mt-2">
-            অর্ডার নিশ্চিত করুন
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- 14. Order Success Confirmation Modal -->
-    <div id="order-success-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('order-success-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 z-10 text-center space-y-4">
-        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl font-bold">
-          ✓
-        </div>
-        <h3 class="text-lg font-bold text-slate-800">অর্ডার সফলভাবে গৃহীত হয়েছে!</h3>
-        <p class="text-xs text-stone-600">আমাদের কাস্টমার প্রতিনিধি শীঘ্রই ফোন দিয়ে আপনার অর্ডারটি নিশ্চিত করবেন।</p>
-        
-        <div class="bg-stone-50 p-3 rounded-xl border border-stone-200 text-left text-xs space-y-1">
-          <div class="flex justify-between">
-            <span class="text-stone-500">অর্ডার আইডি:</span>
-            <span id="order-success-id" class="font-bold text-slate-800"></span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-stone-500">গ্রাহক:</span>
-            <span id="order-success-name" class="font-medium"></span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-stone-500">ঠিকানা:</span>
-            <span id="order-success-address" class="font-medium truncate max-w-[160px]"></span>
-          </div>
-          <div class="flex justify-between border-t border-stone-200 pt-1 font-bold text-[#094a2b]">
-            <span>মোট টাকা:</span>
-            <span id="order-success-total"></span>
-          </div>
-        </div>
-
-        <button onclick="closeDrawer('order-success-modal')" class="w-full py-2.5 bg-[#094a2b] text-white rounded-xl font-semibold text-xs cursor-pointer">
-          ঠিক আছে
-        </button>
-      </div>
-    </div>
-
-    <!-- 15. Wholesale Inquiry Modal -->
-    <div id="wholesale-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('wholesale-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 z-10">
-        <button onclick="closeDrawer('wholesale-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">✕</button>
-        <div class="flex items-center gap-2 mb-3">
-          <span class="p-2 rounded-lg bg-emerald-100 text-[#094a2b]">🏢</span>
-          <div>
-            <h3 class="text-base font-bold text-slate-800">পাইকারি ও করপোরেট অর্ডার</h3>
-            <p class="text-xs text-stone-500">সরাসরি শ্রীমঙ্গলের বাগান থেকে পাইকারি দরে চা সংগ্রহ করুন</p>
-          </div>
-        </div>
-        <form onsubmit="handleWholesaleSubmit(event)" class="space-y-3 text-xs">
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">প্রতিষ্ঠানের নাম / আপনার নাম *</label>
-            <input required type="text" placeholder="যেমন: রূপালী টি স্টোর / মোঃ ফারুক" class="w-full px-3 py-2 border border-stone-300 rounded-lg" />
-          </div>
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">মোবাইল নম্বর *</label>
-            <input required type="tel" placeholder="০১xxxxxxxxx" class="w-full px-3 py-2 border border-stone-300 rounded-lg" />
-          </div>
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">প্রত্যাশিত পরিমাণ (কেজি) *</label>
-            <input required type="text" placeholder="যেমন: ১০ কেজি / ৫০ কেজি" class="w-full px-3 py-2 border border-stone-300 rounded-lg" />
-          </div>
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">কোন ধরনের চা প্রয়োজন?</label>
-            <select class="w-full px-3 py-2 border border-stone-300 rounded-lg bg-white">
-              <option>অর্থোডক্স প্রিমিয়াম ব্লেন্ড</option>
-              <option>সিটিসি ব্ল্যাক টি (রেগুলার ও দানাদার)</option>
-              <option>অর্গানিক গ্রিন টি</option>
-              <option>মিক্সড ভ্যারাইটি</option>
-            </select>
-          </div>
-          <button type="submit" class="w-full py-2.5 bg-[#094a2b] hover:bg-[#07361f] text-white rounded-xl font-bold text-xs cursor-pointer mt-2">
-            অনুরোধ পাঠান
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- 16. Affiliate Program Modal -->
-    <div id="affiliate-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('affiliate-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 z-10">
-        <button onclick="closeDrawer('affiliate-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">✕</button>
-        <div class="flex items-center gap-2 mb-3">
-          <span class="p-2 rounded-lg bg-amber-100 text-amber-700">💰</span>
-          <div>
-            <h3 class="text-base font-bold text-slate-800">Taraz Tea Affiliate Program</h3>
-            <p class="text-xs text-stone-500">রেফার করে ঘরে বসেই আয় করুন</p>
-          </div>
-        </div>
-        
-        <form id="affiliate-form" onsubmit="handleAffiliateSubmit(event)" class="space-y-3 text-xs">
-          <p class="text-stone-600 leading-relaxed">
-            আপনার নাম ও বিকাশ নম্বর দিয়ে নিবন্ধন করুন। সাথে সাথেই আপনার জন্য একটি বিশেষ রেফারেল লিংক তৈরি হবে।
-          </p>
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">আপনার নাম *</label>
-            <input required type="text" placeholder="মোঃ আরমান হোসেন" class="w-full px-3 py-2 border border-stone-300 rounded-lg" />
-          </div>
-          <div>
-            <label class="block font-semibold text-stone-700 mb-1">বিকাশ/নগদ নম্বর (কমিশন পাওয়ার জন্য) *</label>
-            <input id="affiliate-phone" required type="tel" placeholder="০১xxxxxxxxx" class="w-full px-3 py-2 border border-stone-300 rounded-lg" />
-          </div>
-          <button type="submit" class="w-full py-2.5 bg-[#06351e] hover:bg-[#042515] text-white rounded-xl font-bold text-xs cursor-pointer mt-2">
-            অ্যাফিলিয়েট একাউন্ট তৈরি করুন
-          </button>
-        </form>
-
-        <div id="affiliate-success" class="hidden space-y-3 text-center pt-2">
-          <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-xl font-bold">✓</div>
-          <h4 class="text-sm font-bold text-slate-800">অভিনন্দন! আপনার রেফারেল লিংক প্রস্তুত</h4>
-          <div class="flex items-center gap-2">
-            <input id="affiliate-ref-input" readonly type="text" class="flex-1 px-2.5 py-2 bg-stone-50 border border-stone-300 rounded-lg text-xs" />
-            <button onclick="copyAffiliateLink()" class="px-3 py-2 bg-[#094a2b] text-white rounded-lg text-xs font-bold shrink-0">কপি করুন</button>
-          </div>
-          <p class="text-[11px] text-stone-500">এই লিংকটি ফেইসবুক, হোয়াটসঅ্যাপে শেয়ার করুন। প্রতি সফল অর্ডারে ১০% কমিশন আপনার বিকাশ একাউন্টে পৌঁছে যাবে।</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 17. User Auth Modal -->
-    <div id="auth-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-      <div onclick="closeDrawer('auth-modal')" class="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 z-10 text-center space-y-4">
-        <button onclick="closeDrawer('auth-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">✕</button>
-        <div class="w-12 h-12 rounded-full bg-emerald-50 text-[#094a2b] flex items-center justify-center mx-auto">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-        </div>
-        <h3 class="text-base font-bold text-slate-800">লগইন বা সাইন-আপ</h3>
-        <p class="text-xs text-stone-500">আপনার মোবাইল নম্বর দিয়ে এক ক্লিকেই লগইন করুন</p>
-        <input type="tel" placeholder="০১৭xxxxxxxx" class="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg text-center" />
-        <button onclick="closeDrawer('auth-modal'); showToast('স্বাগতম! সফলভাবে লগইন হয়েছে।');" class="w-full py-2.5 bg-[#094a2b] text-white rounded-xl text-xs font-bold cursor-pointer">
-          ওটিপি পাঠান
-        </button>
-      </div>
-    </div>
-
-    <!-- 18. Global Toast Notification -->
-    <div id="global-toast" class="fixed bottom-5 right-5 z-50 hidden bg-slate-900/95 text-white px-4 py-3 rounded-xl shadow-2xl border border-stone-700 flex items-center gap-2.5 text-xs animate-in slide-in-from-bottom-3 duration-200">
-      <span class="text-emerald-400 font-bold">✓</span>
-      <span id="toast-message" class="font-medium"></span>
-    </div>
-
-    <!-- Pure Vanilla JavaScript Script -->
-    <script type="module" src="/script.js"></script>
-  </body>
-</html>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <form style="display: flex; flex-direction: column; gap: 16px;">
+                    <input type="text" placeholder="আপনার নাম" style="padding: 12px; border: 1px solid var(--stone-300); border-radius: var(--radius-lg); font-size: 13px;">
+                    <input type="email" placeholder="ইমেইল" style="padding: 12px; border: 1px solid var(--stone-300); border-radius: var(--radius-lg); font-size: 13px;">
+                    <textarea placeholder="বার্তা লিখুন..." style="padding: 12px; border: 1px solid var(--stone-300); border-radius: var(--radius-lg); font-size: 13px; resize: vertical; min-height: 100px;"></textarea>
+                    <button type="submit" style="background-color: var(--primary-dark); color: white; padding: 12px; border-radius: var(--radius-lg); font-weight: 600; cursor: pointer; font-size: 14px;">পাঠান</button>
+ 
